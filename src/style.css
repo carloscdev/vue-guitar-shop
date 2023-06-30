@@ -68,3 +68,19 @@ body {
   height: 900px;
   z-index: 1;
 }
+
+@media (max-width: 720px) {
+  .header {
+    height: 700px;
+  }
+  .header::after {
+    height: 700px;
+  }
+  .carrito #carrito {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: 250px;
+    width: 100%;
+  }
+}

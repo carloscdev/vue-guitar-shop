@@ -54,7 +54,7 @@ const toggleOpen = () => {
                 <tbody>
                   <tr v-for="guitarra in carrito" :key="guitarra.id">
                     <td>
-                      <img class="w-10 rotate-[10deg]" :src="`/img/${guitarra.imagen}.png`" :alt="guitarra.nombre">
+                      <img class="w-5 sm:w-10 rotate-[10deg]" :src="`/img/${guitarra.imagen}.png`" :alt="guitarra.nombre">
                     </td>
                     <td>{{ guitarra.nombre }}</td>
                     <td>
@@ -97,8 +97,8 @@ const toggleOpen = () => {
 
       <div class="h-full grid md:grid-cols-[0.7fr,1fr] gap-5 items-center">
         <div class="container text-cream">
-          <h1 class="text-[4rem] font-bold">{{ guitarra.nombre }}</h1>
-          <p class="text-xl">{{ guitarra.descripcion }}</p>
+          <h1 class="text-[2rem] md:text-[4rem] font-bold">{{ guitarra.nombre }}</h1>
+          <p class="md:text-xl">{{ guitarra.descripcion }}</p>
           <p class="my-5 text-primary font-bold text-[3rem]">${{ guitarra.precio }}</p>
           <button
           @click="$emit('agregar-carrito', guitarra)"
